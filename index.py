@@ -28,4 +28,15 @@ air_quality["london_mg_per_cubic"] = air_quality["station_london"] * 1.882
 air_quality.head()
 
 
+"""
+To create a new column, use the [] brackets with the new column name at the left side of the assignment.
+Note
+The calculation of the values is done element-wise. This means all values in the given column are multiplied by the value 1.882 at once. You do not need to use a loop to iterate each of the rows!
+"""
+
+# I want to check the ratio of the values in Paris versus Antwerp and save the result in a new column.
+air_quality["ratio_paris_antwerp"] = (air_quality["station_paris"] / air_quality["station_antwerp"])
+air_quality.head()
+
+
 
